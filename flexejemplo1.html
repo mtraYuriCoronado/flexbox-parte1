@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 1: header con navegación con flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        h1{
+            text-align: center;
+            margin: 1em;
+        }
+        header{
+            height: 150px;
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav{
+            /* align-self: flex-end; */
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            margin-right: .5em;
+            margin-bottom: .5em;
+        }
+        li{
+            background-color: #eee;
+            padding: .3em 1em;
+            margin-left: 10px;
+            border-radius: 5px;
+            line-height: 2;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        li:hover{
+            background-color: tan;
+        }
+        .logo{
+            /* border-radius: 50%; */
+            margin-left: .5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <img class="logo" src="https://loremflickr.com/120/120" alt=""> -->
+        <img class="logo" src="logo-crepas.png" alt="" width="120px" height="120px">
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Quienes somos</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Ejemplo 1: header con navegación con flexbox</h1>
+</body>
+</html>

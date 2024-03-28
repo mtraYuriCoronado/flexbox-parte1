@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBTIS 219 | En la región tu mejor opción</title>
+    <style>
+        :root{
+            --color01:#d8d8d8;
+            --color02:#98989a;
+            --color03:#707372;
+            --color04:#d4c19c;
+            --color05:#ddc9a3;
+            --color06:#B58D64;
+            --color07:#916f3c;
+            --color08:#741a36;
+            --color09:#9F2241;
+            --color10:#691c32;
+            --color11:#561428;
+            --color12:#256E58;
+            --color13:#235b4e;
+            --color14:#13322B;
+            --color15:#0C231E;
+            --color16:#10312b;
+        }
+        *{
+            margin: 0;
+        }
+        body{
+            font-family: Montserrat, Arial, Helvetica, sans-serif;            
+        }
+        header{
+            background-color: rgb(216, 237, 255);
+            height: 99vh;
+        }
+        h1{
+            font-size: 4rem;
+            padding-bottom: 10px;
+        }
+        main{
+            margin: 3rem 0px;
+        }
+        footer{
+            margin: 3rem 0px 0px 0px;
+            height: 15rem;
+            background-color: var(--color14);
+            font-size: smaller;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .nav-bar{
+            background-color: var(--color14);
+            padding: .5rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-items{
+            display: flex;
+            margin-right: 1rem;
+        }
+        .nav-link{
+            list-style: none;
+            margin-left: 10px;
+        }
+        .nav-link:hover{
+            cursor: pointer;
+            color: var(--color06);
+        }
+        .logo{
+            margin-left: 1rem;
+        }
+        .cb-banner{
+            height: 93%;
+            background-image: url(DSCN3575.JPG);
+            background-size: cover;
+            display: flex;
+            align-items: center;
+        }
+        .cb-h1{
+            background-color: var(--color09);
+            width: 40%;
+            height: 15rem;
+            margin-left: 3rem;
+            padding: 2rem;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            border-radius: .5rem;
+        }
+        .slogan{
+            font-size: 1.3rem;
+            padding-bottom: 20px;
+        }
+        .btn-simple{
+            color: white;
+            text-decoration: none;
+            background-color: var(--color11);
+            padding: 1rem;
+            margin: .5rem 0px;
+        }
+        .btn-simple:hover{
+            background-color: var(--color09);
+            outline: .1rem solid white;
+        }
+        .foot-item{
+            /* border: 3px solid rgb(251, 255, 0); */
+            height: 10rem;
+        }
+        .foot-logo{
+            width: 10rem;
+            height: 10rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <img class="logo" src="logo-blanco-horizontal.png" alt="logo del cbtis 219 en color blanco en formato horizontal" height="50px">
+            <ul class="nav-items">
+                <li class="nav-link">Inicio</li>
+                <li class="nav-link">Quienes somos</li>
+                <li class="nav-link">Carreras</li>
+                <li class="nav-link">Alumnos</li>
+                <li class="nav-link">Noticias</li>
+                <li class="nav-link">Trámites</li>
+                <li class="nav-link">Instalaciones</li>
+            </ul>
+        </nav>
+        <section class="cb-banner">
+            <div class="cb-h1">
+                <h1>CBTIS 219</h1>
+                <p class="slogan">En la región tu mejor opción</p>
+                <a class="btn-simple" href="#">Descubre tu cbtis</a>
+            </div>
+        </section>
+    </header>
+    <main>
+        <ol class="breadcrumb">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Inscripciones</a></li>
+        </ol>
+
+        <h2>Bienvenidos al CBTIS 219</h2>
+        <p>En el Cbtis 219, nos comprometemos a preparar a nuestros estudiantes para enfrentar los desafíos que encontrarán en su trayectoria universitaria. Esta tarea no es sencilla, pero dedicamos nuestros esfuerzos diarios para lograrlo. Por eso, ofrecemos una educación de alta calidad que se centra en el individuo y que se adapta a la realidad actual.</p>
+
+    </main>
+
+    <footer>
+        <section class="foot-item">
+            <img class="foot-logo" src="logo-cbtis219-blanco.png" alt="logo del cbtis 219">
+        </section>
+        <section class="foot-item">
+            <h4>Navegación rápida</h4>
+            <ul>
+                <li>Inicio</li>
+                <li>Quienes somos</li>
+                <li>Carreras</li>
+                <li>Alumnos</li>
+                <li>Noticias</li>
+                <li>Trámites</li>
+                <li>Instalaciones</li>
+            </ul>
+        </section>
+        <section class="foot-item">
+            <h4>Rede sociales</h4>
+            <ul>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>YouTube</li>
+                <li>Tik-tok</li>
+            </ul>
+        </section>
+        <section class="foot-item">
+            <h4>Contáctanos</h4>
+            <p>Calle 8 y 9 Nicolás Bravo</p>
+            <p>C.P. 87780 Nvo. Padilla, Tams. México</p>
+            <p>Tel. +52-835-324-0055</p>
+            <p>cbtis219.dir@dgeti.sems.gob.mx</p>
+        </section>
+    </footer>
+</body>
+</html>

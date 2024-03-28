@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox primera parte</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            text-align: center;
+            color: coral;
+        }
+        section{
+            background-color: wheat;
+            margin: 2rem auto;
+            width: 700px;
+            height: 100px;
+        }
+        footer{
+            height: 100px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .centrado{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-container{            
+            width: 500px;
+            height: 300px;
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .flex-item{
+            background-color: rosybrown;
+            color: white;
+            /* width: 100px; */
+            /* height: 100px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .flex-item:nth-child(2){
+            font-size: 3em;
+            align-self: center;
+        }
+        .flex-item:nth-child(3){
+            align-self: flex-end;
+        }
+        .flex-item:nth-child(odd){
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1>Flexbox primera parte</h1>
+        <ul>
+            <li>Flexbox es un modelo de layout el cual define como se organiza y aparecen los elementos en la pantalla</li>
+            <li>Se utiliza la propiedad <code>display: flex</code></li>
+            <li>Flexbox se aplica al contenedor padre para crear cajas flexibles como hijos</li>
+            <li>Cuando creamos el contexto flexible, se crean dos ejes: main axis y cross axis</li>
+            <li><img src="flex-direction-terms.svg" alt="flex direction terms" width="50%"></li>
+            <li>Cambia la posición de los ejes: <code>flex-direction: row(default ) | column | row-reverse | column-reverse</code></li>
+            <li>Alinear elementos en el main axis <code>justify-content: flex-start(default) | center | space-between | space-around | space-evenly | flex-end </code></li>
+            <li>Alinea los elementos con respecto al cross axis <code>align-items: stretch(default) | flex-start | flex-end | baseline | center</code></li>
+            <li>Alinea unicamente al elemento que se le aplica en el cross axis: <code>align-self: mismos valores que align-items</code></li>
+        </ul> 
+
+    <section class="centrado">
+        Texto centrado con flexbox
+    </section>
+
+    <section class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <!-- <div class="flex-item">3</div> -->
+        <!-- <div class="flex-item">4</div> -->
+        <div class="flex-item"><img src="https://loremflickr.com/120/120" alt=""></div>
+    </section>
+    <footer>
+        By Yuri Coronado
+    </footer>
+</body>
+</html>

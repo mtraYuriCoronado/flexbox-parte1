@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 3 - Dado con flexbox</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1{
+            text-align: center;
+            font-size: 3rem;
+            color: skyblue;
+            text-shadow: 2px 2px 5px #000;
+        }
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        [class*="cara"] {
+            background-color: #333;
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+            margin: 20px;
+            display: flex;
+        }
+
+        .punto {
+            background-color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+
+        .cara1 {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cara2 {
+            justify-content: space-between;
+        }
+
+        .cara2 .punto:nth-child(2) {
+            background-color: deeppink;
+            align-self: flex-end;
+        }
+
+        .cara3 {
+            justify-content: space-between;
+        }
+
+        .cara3 .punto:nth-child(2) {
+            background-color: springgreen;
+            align-self: center;
+        }
+
+        .cara3 .punto:nth-child(3) {
+            background-color: yellow;
+            align-self: flex-end;
+        }
+
+        .columna {
+            outline: 2px solid greenyellow;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cara4 {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cara5 {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cara5>.punto {
+            background-color: aqua;
+            align-self: center;
+        }
+
+        .cara6 {
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejemplo 2 - Dado con flexbox</h1>
+    <section class="main-container">
+
+        <div class="cara1">
+            <div class="punto"></div>
+        </div>
+        <div class="cara2">
+            <div class="punto"></div>
+            <div class="punto"></div>
+        </div>
+        <div class="cara3">
+            <div class="punto"></div>
+            <div class="punto"></div>
+            <div class="punto"></div>
+        </div>
+        <div class="cara4">
+            <div class="columna">
+                <div class="punto"></div>
+                <div class="punto"></div>
+            </div>
+            <div class="columna">
+                <div class="punto"></div>
+                <div class="punto"></div>
+            </div>
+        </div>
+        <div class="cara5">
+            <div class="columna">
+                <div class="punto"></div>
+                <div class="punto"></div>
+            </div>
+            <div class="punto"></div>
+            <div class="columna">
+                <div class="punto"></div>
+                <div class="punto"></div>
+            </div>
+        </div>
+        <div class="cara6">
+            <div class="columna">
+                <div class="punto"></div>
+                <div class="punto"></div>
+            </div>
+            <div class="columna">
+                <div class="punto"></div>
+                <div class="punto"></div>
+            </div>
+            <div class="columna">
+                <div class="punto"></div>
+                <div class="punto"></div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
