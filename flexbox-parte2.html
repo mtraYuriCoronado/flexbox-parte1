@@ -3,9 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width= , initial-scale=1.0">
-    <title>Document</title>
+    <title>Flexbox segunda parte</title>
+    <style>
+        body{
+            font-family: 'Open Sans', 'Arial Narrow', Arial, sans-serif;
+        }
+        h1{
+            text-align: center;
+            color: darkturquoise;
+        }
+        .container{
+            width: 90%;
+            height: 500px;
+            background-color: lightblue;
+            display: flex;
+            /* flex-wrap: wrap; */
+        }
+        .item{
+            background-color: turquoise;
+            color: white;
+            /* width: 200px; */
+            /* margin: 10px; */
+            /* flex-basis: 25%; */
+            /* flex-grow: 1; */
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item:nth-child(even){
+            background-color: deeppink;
+        }
+        .item:nth-child(1){
+            flex:20;
+        }
+        .item:nth-child(2){
+            flex:10;
+        }
+        .item:nth-child(3){
+            flex:50;
+        }
+        .item:nth-child(4){
+            flex:20;
+        }
+    </style>
 </head>
 <body>
+    <h1>Flexbox segunda parte</h1>
     
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <!-- <div class="item">5</div> -->
+    </div>
+
+    <ul>
+        <li>Main size: el tamaño con respecto al main axis por defecto es el width</li>
+        <li>Cross size: es el tamaño con respecto al cross axis, por defecto es el height</li>
+        <li>El tamaño de cross size se calcula bajo algunos escenarios:</li>
+        <ul>
+            <li>Se ha definido un tamaño fijo por height</li>
+            <li>No se ha definido el tamaño ni align-items o align-content por lo que toma el valor de stretch</li>
+            <li>No se define un tamaño fijo pero se define align-items o align-content diferente de strech</li>
+        </ul>
+        <li>El tamaño mdel main size se define por:</li>
+        <ol>
+            <li>El espacio disponible: es el espacio que no está ocupado por los items o sus márgenes </li>
+            <li>El espacio ocupado: es el espacio que ocupan los items y sus márgenes</li>
+            <li>Los márgenes no se colpasan</li>
+            <li></li>
+        </ol>
+        <li><code>flex-basis:</code> determina el tamaño base del item como si fuera width, su valor por defecto es auto</li>
+        <li><code>flex-grow: </code> nos indica como va a crecer un elemento con respecto a su flex-basis, su valor por defecto es 0</li>
+        <li><code>flex-shrink:</code> es lo contrario de flex-grow, lo que indica a un elemento que tanto a a encojerse cuando el edpacio disponible sea negativo, su valor por defecto es 1 </li>
+        <li><code>flex:</code> es un shorthan de flex-grow, flex-shrink y flex-basis. El valor predeterminado es 0 1 auto, llamado auto. </li>
+        <ul>
+            <li><code>flex: auto</code> = <code>flex: 0 1 auto</code></li>
+            <li><code>flex: none </code>= <code>flex: 0 0 auto</code></li>
+            <li><code>flex: N</code> = <code>flex: N 0 0 </code></li>
+        </ul>
+    </ul>
 </body>
 </html>
